@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+			<!-- bootstrap css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+	<!-- external css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<!-- google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet">
+
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+	<!-- animate.css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+</head>
+<body>
+
+	<div id="bgMain">
+		
+		<h4 class="mt-2"  style="text-shadow: 1px 1px black;">Find the Location of the Fortune Teller</h4>
+
+
+		<!-- acquired food alert -->
+		<div class="text-center " >
+		<span id="food" style="text-shadow: 2px 2px black;font-size: 20px;letter-spacing: 1px;"></span><br>
+		</div>
+
+		<!-- House of witch -->
+		<button onclick="openHouse()" class="btn py-5" style="position: relative;top: 46px;left: 223px; z-index: 95;background-color: transparent;opacity: 0;">House1</button><br>
+
+		<!-- House of Glen -->
+		<a href="house2.html"><button class="btn py-5 m-0" style="position: relative;top: -131px;left: -45px;opacity: 0;">House2</button></a><br>
+
+		<!-- Judy -->
+		<a href="person.html"><!-- <button class="btn w-25">Person</button> --><img src="assets/images/judy.png" height="70px" width="70px" style="position: relative;top: -124px;left:-115px;opacity: 0.7"></a><br>
+
+		<!-- food -->
+		<button onclick="getFood()" id="takeFood" class="btn w-25" style="background-color: transparent;position: relative;top:-169px;left:-272px;"><img src="assets/images/food.png" height="40px" width="40px" style="opacity: 0.6"></button></a>
+
+	</div>
+
+
+	<div id="frontDoor" style="display: none">
+		<img src="assets/images/manAttack.png" style="position: absolute;right: 76px;z-index: 0;">
+		<h5 style="background-color: grey;color: white;width: 700px;height: 30px;position: relative;left: 0;top: 400px;text-align: left;border: 1px solid black;"><strong>Guard Vince</strong></h5>
+		<p>I'm the guard here! No one can enter!<br>	
+			<a href="#" style="position: relative;left: 286px;list-style-type: none;text-decoration: none;" onclick="openDialog()">Continue >></a>
+		</p>
+		<a href="fortune2.html" id="dialogVince" style="display: none;opacity: 0.8;"><button class="btn  btn-primary w-25">Leave</button></a>
+
+	</div>
+
+<script type="text/javascript">
+
+var acquiredFood=0;
+
+	function getFood(){		
+		document.getElementById("food").innerHTML= "You acquired a food!";
+		document.getElementById("food").style.backgroundColor= "rgba(0,0,0,0.8)";
+		document.getElementById("food").style.borderRadius= "3px";
+		document.getElementById("food").style.padding= "3px";
+		// document.getElementById("closeAlert").style.display="block";
+		acquiredFood = acquiredFood+1;
+		console.log(acquiredFood);
+		document.getElementById("takeFood").style.display="none";
+
+	}
+
+	function openHouse(){
+		if(acquiredFood==0){
+				document.getElementById("bgMain").style.display="none";
+				document.getElementById("frontDoor").style.display="block";
+		}
+
+		if(acquiredFood>0){
+			// alert("You may enter now");
+			window.location="house1.html";	
+		}
+	}
+
+	function resetAlert(){
+		document.getElementById("food").style.display="none";
+	}
+
+	function openDialog(){
+		document.getElementById("dialogVince").style.display="block";
+	}
+
+</script>
+
+</body>
+</html>

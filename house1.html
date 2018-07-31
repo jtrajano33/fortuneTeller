@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+				<!-- bootstrap css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+	<!-- external css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<!-- google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet">
+
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+	<!-- animate.css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+</head>
+<body>
+
+	<div id="frontDoor">
+			<img src="assets/images/manDefend.png" style="position: absolute;right: 76px;z-index: 0;">
+			
+			<h5 style="background-color: grey;color: white;width: 700px;height: 30px;position: relative;left: 0;top: 400px;text-align: left;border: 1px solid black;"><strong>Guard Vince</strong></h5>
+			<p>Thanks for the food! What?You want to use the comfort room?Sure enter inside but don't go anywhere else ok?
+				<a href="#" style="position: relative;left: 200px;list-style-type: none;text-decoration: none;" onclick="openDialog()">Continue >></a>
+			</p>
+		
+		
+
+		<a href="houseOpen.html"  id="dialogVince" style="display: none;opacity: 0.8;"><button class="btn btn-primary">"Sure pal. Enjoy your food!(with sleeping pills)"</button></a>
+
+	</div>
+
+<script type="text/javascript">
+	function openDialog(){
+		document.getElementById("dialogVince").style.display="block";
+	}
+</script>
+
+</body>
+</html>

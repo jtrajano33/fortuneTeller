@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+				<!-- bootstrap css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+	<!-- external css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<!-- google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet">
+
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+	<!-- animate.css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+</head>
+<body>
+	
+<div id="fortuneTelling"><!-- Actual game page -->
+	<div id="title">
+		<h1 class="animated zoomIn" style="text-shadow: 1px 1px black">Fortune Teller</h1>
+	</div>
+	
+	<!-- <img src="assets/images/fortune.png" id="fortuneT"> -->
+
+	<div class="" style="margin-top: 150px;text-shadow: 1px 1px black;background-color: grey; padding: 3px;border: 1px solid white;"><h5>Think of a Yes or No question and click the crystal ball to know the answer</h5></div>
+
+
+	<div style="position: relative;top: 115px;left: 13px;">
+		<h5 style="text-shadow: 1px 1px black"><span id="answer"></span></h5>
+	</div>
+
+
+	<button onclick="tell_fortune()" style="position: absolute;top: 328px;left: 289px;border-radius: 50%;padding: 47px;opacity: 0;">e</button>
+
+
+</div>
+
+<script type="text/javascript">
+	function tell_fortune(){
+
+	var random_number = Math.random()*2;
+	random_number=Math.round(random_number);
+	// document.getElementById("fortuneT").src="assets/images/fortune2.png";
+
+	var answer="";
+	if(random_number==1){
+		answer = "YES!";
+		document.getElementById("answer").innerHTML=answer;
+	}
+
+
+
+	else if(random_number==2){
+		answer = "NO!";
+		document.getElementById("answer").innerHTML=answer;
+	}
+
+	else{
+		answer = "MAYBE!";
+		document.getElementById("answer").innerHTML=answer;
+	}
+}
+
+</script>
+
+
+</body>
+</html>

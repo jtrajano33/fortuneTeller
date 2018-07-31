@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+				<!-- bootstrap css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+	<!-- external css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<!-- google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet">
+
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+	<!-- animate.css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+</head>
+<body>
+	
+	<div id="judyScene">
+		<img src="assets/images/judy.png" style="position: absolute;right: 76px;z-index: 0;">
+		<h5 style="background-color: grey;color: white;width: 700px;height: 30px;position: relative;left: 0;top: 400px;text-align: left;border: 1px solid black;"><strong>Judy</strong></h5>
+		<p>I feel sorry for the guard in that house. He hasn't eaten anything for the last 2days.<br> I wonder what's he up to?
+			<a href="#" style="position: relative;left: 200px;list-style-type: none;text-decoration: none;" onclick="openDialog()">Continue >></a>
+		</p>
+
+
+		<a href="fortune2.html" style="z-index: 90;position: relative;top: 60px; display: none;"id="dialogJudy"><button class="btn btn-primary"  style="opacity: 0.8">"Hmmm..seems suspicious. I'll check it out."</button></a>
+
+	</div>
+
+
+<script type="text/javascript">
+	function openDialog(){
+		document.getElementById("dialogJudy").style.display="block";
+	}
+</script>
+</body>
+</html>

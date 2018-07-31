@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+				<!-- bootstrap css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+	<!-- external css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<!-- google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet">
+
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+	<!-- animate.css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+</head>
+<body>
+
+	<div id="hauntedHouse">
+		<img src="assets/images/glen.png" style="position: absolute;right: 76px;z-index: 0;width: 597px;top: 113px;">
+
+		<h5 style="background-color: grey;color: white;width: 700px;height: 30px;position: relative;left: 0;top: 400px;text-align: left;border: 1px solid black;"><strong>Mansion Chef Glen</strong>
+		</h5>
+		<p>You can't bribe me! Like I said, I don't know anything!<br>
+			<a href="#" style="position: relative;left: 286px;list-style-type: none;text-decoration: none;" onclick="openDialog()">Continue >></a>
+		</p>
+
+		<div id="dialogGlen" style="display: none;">
+		<a href="fortune2.html" style="opacity: 0.8;"><button class="btn btn-dark text-white border-white w-50">"I'll be back later"</button></a>
+		</div>
+	</div>
+
+
+<script type="text/javascript">
+
+	function openDialog(){
+		document.getElementById("dialogGlen").style.display="block";
+	}
+</script>
+</body>
+</html>

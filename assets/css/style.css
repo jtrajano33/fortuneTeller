@@ -1,0 +1,282 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: grey;
+}
+
+p{
+	padding-top: 10px;
+	margin-bottom: 20px: 
+	z-index:99;
+	background-color: white;
+	width: 700px;
+	height: 70px;
+	color: black;
+	position: relative;
+	left: 0;
+	top: 392px;
+}
+
+
+button{
+	margin: 20px;
+	z-index:99;
+}
+
+#canvas{
+	position: relative;
+	top: 0;
+	left:0;
+	background-color: black;
+	height: 500px;
+	width: 700px;
+	text-align: center;
+	display: none;
+	color: white;
+
+
+}
+
+#canvas2{
+	position: absolute;
+	top: 0;
+	left:0;
+	background-color: black;
+	/*background-image: url('../images/bg2.jpg');*/
+	height: 500px;
+	width: 700px;
+	text-align: center;
+	color: white;
+/*	animation: 	darkness 9s linear infinite;*/
+
+}
+
+#canvas3{
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left:0;
+	background-color: black;
+	/*background-image: url('../images/bg2.jpg');*/
+	height: 500px;
+	width: 700px;
+	text-align: center;
+	color: white;
+
+/*	animation: 	darkness 9s linear infinite;*/
+
+}
+
+#frontDoor{
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left:0;	
+	background-image: url('../images/frontDoor.jpg');
+	background-size: 1062px 799px;
+	background-position: center bottom;
+	height: 500px;
+	width: 700px;
+	text-align: center;
+	color: white;
+
+/*	animation: 	darkness 9s linear infinite;*/
+
+}
+
+#firstFloor{
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left:0;	
+	background-image: url('../images/1stfloor2.jpg');
+	background-size: 700px 499px;
+	background-position: center bottom;
+	height: 500px;
+	width: 700px;
+	text-align: center;
+	color: white;
+
+/*	animation: 	darkness 9s linear infinite;*/
+
+}
+
+#fortuneTelling{
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left:0;	
+	background-image: url('../images/tellFortune.jpeg');
+	background-size: 700px 499px;
+	background-position: center bottom;
+	height: 500px;
+	width: 700px;
+	text-align: center;
+	color: white;
+
+/*	animation: 	darkness 9s linear infinite;*/
+
+}
+
+#secretBase{
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left:0;	
+	background-image: url('../images/1stfloor5.jpg');
+	background-size: 700px 499px;
+	background-position: center bottom;
+	height: 500px;
+	width: 700px;
+	text-align: center;
+	color: white;
+
+/*	animation: 	darkness 9s linear infinite;*/
+
+}
+
+
+
+#room{
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left:0;	
+	background-image: url('../images/room.jpg');
+	background-size: 700px 499px;
+	background-position: center bottom;
+	height: 500px;
+	width: 700px;
+	text-align: center;
+	color: white;
+
+/*	animation: 	darkness 9s linear infinite;*/
+
+}
+
+
+#hauntedHouse{
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left:0;	
+	background-image: url('../images/haunted2.jpg');
+	background-size: 990px 1035px;
+	background-position: center bottom;
+	height: 500px;
+	width: 700px;
+	text-align: center;
+	color: white;
+
+/*	animation: 	darkness 9s linear infinite;*/
+
+}
+
+#judyScene{
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left:0;
+	background-image: url('../images/judyScene.jpg');
+	background-size: 700px 400px;
+	height: 500px;
+	width: 700px;
+	text-align: center;
+	color: white;
+
+/*	animation: 	darkness 9s linear infinite;*/
+
+}
+
+#bgMain{
+	position: absolute;
+	top: 0;
+	left:0;
+	background-color: black;
+	background-image: url('../images/opening.jpg');
+	height: 500px;
+	width: 700px;
+	text-align: center;
+	color: white;
+	background-size: 850px 500px;
+/*	animation: 	darkness 9s linear infinite;*/
+
+}
+
+#start{
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left:0;
+	background-color: black;
+	background-image: url('../images/start.jpg');
+	height: 500px;
+	width: 700px;
+	text-align: center;
+	color: white;
+	background-size: cover;
+/*	animation: 	darkness 9s linear infinite;*/
+
+}
+
+#witch{
+		animation: flying 10s linear infinite;
+}
+
+
+.thunder{
+	animation: light 0.5s linear infinite;
+			
+}
+
+@keyframes flying{
+
+	from{
+		transform: translateX(0px);
+	}
+
+	to{
+		transform: translateX(-700px);
+	}
+}
+
+@keyframes light{
+
+	from{
+		opacity: 0;
+	}
+
+	to{
+		opacity: 1;
+	}
+}
+
+@keyframes darkness{
+
+	from{
+		background-color: black;
+	}
+
+	to{
+		background-color: white;
+		opacity: 0.5;
+	}
+}
+
+#title{
+	color: black;
+	margin-bottom: 50px;
+	padding-top: 50px;
+	color: white;
+}
+
+
+#fortuneT{
+    position: absolute;
+    transform: scale(0.3);
+    top: -133px;
+    left: 192px;
+}
