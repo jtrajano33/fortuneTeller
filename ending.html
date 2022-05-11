@@ -19,16 +19,32 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
 </head>
 <body>
-	<div id="endingScreen">
+	<audio id="divAudio">
+  		<source src="./assets/audio/end.wav" type="audio/wav">
+	</audio>
+
+	<div id="endingScreen" onmousemove="playMusic()">
 		<div></div>
-		<div class="text-center" id="endingText">"Wait... Why did all of a sudden it become so dark?"</div>
+		<div class="text-center" id="endingText">"Wait... Why did it become so dark all of a sudden?"</div>
 		<div></div>
 	</div>
 	
 	<script type="text/javascript">
 		document.body.style.zoom = "140%";
+		localStorage.setItem("acquiredFood", 0);
+		localStorage.setItem("book", 0);
 
 		let endingText = document.getElementById("endingText");
+		let hasPlayed = false;
+
+		function playMusic(){
+			let audioToplay = document.getElementById("divAudio");
+
+			if(!hasPlayed){
+				hasPlayed = true;
+				audioToplay.play();
+			}
+		}
 
 		this.setTimeout(() => {
 			endingText.innerHTML = "A strong force hits you in the back and you fall into the ground.."

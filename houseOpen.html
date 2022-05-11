@@ -24,7 +24,9 @@
 
 	<div id="firstFloor">
 		<br><span id="secretDoor"></span><br>
-		<p style="top: 430px;position: absolute;">Hmmm... Seems like I won't find anything here. Maybe I need to ask around for clues<br>
+		<p style="top: 430px;position: absolute;">
+			<span id="houseMessage">Hmmm... Seems like I won't find anything here. Maybe I need to ask around for clues</span>
+			<br>
 			<a href="#" style="position: relative;left: 267px;list-style-type: none;text-decoration: none;" onclick="openDialog()">Continue >></a>
 		</p>
 
@@ -43,7 +45,7 @@
 
 	<div id="room" style="display: none;">
 		<span id="book"></span>
-		<p style="position: absolute;top: 430px;">...Glen said something about...<br>
+		<p style="position: absolute;top: 430px;"><span id="glenClue">...Glen said something about...</span><br>
 			<a href="#" style="position: relative;left: 286px;list-style-type: none;text-decoration: none;" onclick="openDialog1()">Continue >></a>
 		</p>
 
@@ -66,6 +68,17 @@
 
 	<script type="text/javascript">
 		document.body.style.zoom = "140%";
+		let book = localStorage.getItem("book");
+		let houseMessage = document.getElementById("houseMessage");
+		let takeBook = document.getElementById("takeBook");
+		let glenClue = document.getElementById("glenClue");
+
+		if(book>=1){
+			houseMessage.innerHTML = "I found a book on the 2nd floor and it might be useful. But where?";
+			takeBook.style.display = "none";
+			glenClue.innerHTML = "What else can I find here? Hmmmm...";
+		}
+
 		window.addEventListener("load", ()=>{
 			const loading = document.getElementById("loadingScreen");
 			setTimeout(()=>{
@@ -84,8 +97,9 @@
 		function getBook(){
 			document.getElementById("book").innerHTML= "You acquired a book! Something is written: WOODEN SKULL";
 			secretKey=secretKey+1;
-			console.log(secretKey);
+			localStorage.setItem("book", 1);
 			document.getElementById("takeBook").style.display="none";
+			houseMessage.innerHTML = "I found a book on the 2nd floor and it might be useful. But where?" 
 		}
 
 		function firstFloor(){
@@ -97,13 +111,12 @@
 		}
 
 		function secretDoor1(){
-			if(secretKey==0){
+			if(secretKey>0 || book > 0){
+				window.location="secretPassage.html";
+			}
+			else{
 				document.getElementById("secretDoor").innerHTML= "A normal bookshelf. Nothing in here..";
 			}
-
-			if(secretKey>0){
-				window.location="secretPassage.html";
-			}	
 		}
 
 		function openDialog(){
