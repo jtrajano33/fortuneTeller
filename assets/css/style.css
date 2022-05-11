@@ -254,15 +254,15 @@ button{
 	background-size: 850px 500px;
 }
 
-.loadingText, #endingText{
-	font-weight: bold;
-	font-size: 15px;
-}
-.loadingText{
+.loadingText{	
+	font-size: 20px;
+	font-family: Horror;
 	animation: loading 1s linear infinite;
 }
 
 #endingText{
+	font-weight: bold;
+	font-size: 15px;
 	animation: fadeIn 2s linear;
 }
 
