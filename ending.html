@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fortune Teller</title>
+
+		<!-- bootstrap css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+	<!-- external css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<!-- google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet">
+
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+	<!-- animate.css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+</head>
+<body>
+	<div id="endingScreen">
+		<div></div>
+		<div class="text-center" id="endingText">"Wait... Why did all of a sudden it become so dark?"</div>
+		<div></div>
+	</div>
+	
+	<script type="text/javascript">
+		document.body.style.zoom = "140%";
+
+		let endingText = document.getElementById("endingText");
+
+		this.setTimeout(() => {
+			endingText.innerHTML = "A strong force hits you in the back and you fall into the ground.."
+
+			this.setTimeout(() => {
+				endingText.innerHTML = "To be continued...";
+
+				this.setTimeout(() => {
+					window.location.href = "index.html";
+				},2000)
+			}, 6000)
+		}, 6000)
+	</script>
+</body>
+</html>

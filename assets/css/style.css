@@ -232,7 +232,7 @@ button{
 			
 }
 
-#loadingScreen{
+#loadingScreen, #endingScreen{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -249,10 +249,16 @@ button{
 	background-size: 850px 500px;
 }
 
-.loadingText{
+.loadingText, #endingText{
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 15px;
+}
+.loadingText{
 	animation: loading 1s linear infinite;
+}
+
+#endingText{
+	animation: fadeIn 2s linear;
 }
 
 .loader{
@@ -314,6 +320,16 @@ button{
 }
 
 @keyframes loading{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+
+@keyframes fadeIn{
 	from{
 		opacity: 0;
 	}
