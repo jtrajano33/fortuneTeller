@@ -250,8 +250,8 @@ button{
 }
 
 .loadingText{
-	font-weight: bolder;
-	font-size: 25px;
+	font-weight: bold;
+	font-size: 20px;
 	animation: loading 1s linear infinite;
 }
 
