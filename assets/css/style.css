@@ -232,6 +232,38 @@ button{
 			
 }
 
+#loadingScreen{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	z-index: 120;
+	position: absolute;
+	top: 0;
+	left:0;
+	background-color: black;
+	height: 500px;
+	width: 700px;
+	text-align: center;
+	color: white;
+	background-size: 850px 500px;
+}
+
+.loadingText{
+	font-weight: bolder;
+	font-size: 25px;
+	animation: loading 1s linear infinite;
+}
+
+.loader{
+	border: 16px solid #f3f3f3;
+	border-top: 16px solid green;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	animation: spin 2s linear infinite;
+}
+
 @keyframes flying{
 
 	from{
@@ -279,4 +311,22 @@ button{
     transform: scale(0.3);
     top: -133px;
     left: 192px;
+}
+
+@keyframes loading{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+@keyframes spin{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
 }

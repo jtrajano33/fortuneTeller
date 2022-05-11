@@ -17,11 +17,14 @@
 
 	<!-- animate.css -->
 	<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+
+	<link rel="prefetch" type="image/jpg" as="image" href="./assets/images/opening.jpg">
+	<link rel="prefetch" type="image/png" as="image" href="./assets/images/judy.png">
+	<link rel="prefetch" type="image/png" as="image" href="./assets/images/food.png">
 </head>
 <body>
 
-	<div id="bgMain">
-		
+	<div id="bgMain">		
 		<h4 class="mt-2"  style="text-shadow: 1px 1px black;">Find the Location of the Fortune Teller</h4>
 
 
@@ -37,10 +40,12 @@
 		<a href="house2.html"><button class="btn py-5 m-0" style="position: relative;top: -131px;left: -45px;opacity: 0;">House2</button></a><br>
 
 		<!-- Judy -->
-		<a href="person.html"><!-- <button class="btn w-25">Person</button> --><img src="assets/images/judy.png" height="70px" width="70px" style="position: relative;top: -124px;left:-115px;opacity: 0.7"></a><br>
+		<a href="person.html"><!-- <button class="btn w-25">Person</button> --><img src="assets/images/judy.png" height="70px" width="70px" style="position: relative;top: -124px;left:-115px;opacity: 0.7; cursor: default;"></a><br>
 
 		<!-- food -->
-		<button onclick="getFood()" id="takeFood" class="btn w-25" style="background-color: transparent;position: relative;top:-169px;left:-272px;"><img src="assets/images/food.png" height="40px" width="40px" style="opacity: 0.6"></button></a>
+		<button onclick="getFood()" id="takeFood" class="btn mb-0 mt-0" style="background-color: transparent;position: relative; top:-169px; left:-272px; cursor: default;">
+			<img src="assets/images/food.png" height="40px" width="40px" style="opacity: 0.6;cursor: default;">
+		</button>
 
 	</div>
 
@@ -52,19 +57,31 @@
 			<a href="#" style="position: relative;left: 286px;list-style-type: none;text-decoration: none;" onclick="openDialog()">Continue >></a>
 		</p>
 		<a href="fortune2.html" id="dialogVince" style="display: none;opacity: 0.8;"><button class="btn  btn-primary w-25">Leave</button></a>
+	</div>
 
+	<div id="loadingScreen">
+		<div></div>
+		<div class="loader"></div>
+		<div class="loadingText text-center">Loading... Please Wait...</div>
+		<div></div>
 	</div>
 
 <script type="text/javascript">
 
-var acquiredFood=0;
+	window.addEventListener("load", ()=>{
+		const loading = document.getElementById("loadingScreen");
+		setTimeout(()=>{
+			loading.style.display="none";
+		},3000);		
+	})
+
+	var acquiredFood=0;
 
 	function getFood(){		
 		document.getElementById("food").innerHTML= "You acquired a food!";
 		document.getElementById("food").style.backgroundColor= "rgba(0,0,0,0.8)";
 		document.getElementById("food").style.borderRadius= "3px";
 		document.getElementById("food").style.padding= "3px";
-		// document.getElementById("closeAlert").style.display="block";
 		acquiredFood = acquiredFood+1;
 		console.log(acquiredFood);
 		document.getElementById("takeFood").style.display="none";
