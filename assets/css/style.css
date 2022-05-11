@@ -7,6 +7,11 @@ body{
 	background-color: grey;
 }
 
+@font-face{
+  font-family: "Horror";
+  src: url("../fonts/horror.ttf") format("truetype");
+}
+
 p{
 	padding-top: 10px;
 	margin-bottom: 20px: 
@@ -270,6 +275,10 @@ button{
 	animation: spin 2s linear infinite;
 }
 
+#btn-hover:hover{
+	transform: scale(1.1);
+}
+
 @keyframes flying{
 
 	from{
@@ -309,6 +318,7 @@ button{
 	margin-bottom: 50px;
 	padding-top: 50px;
 	color: white;
+	font-family: Horror;
 }
 
 
