@@ -254,6 +254,11 @@ button{
 	background-size: 850px 500px;
 }
 
+.names{
+	padding-left: 5px;
+    letter-spacing: 1px;
+}
+
 .loadingText{	
 	font-size: 20px;
 	font-family: Horror;
